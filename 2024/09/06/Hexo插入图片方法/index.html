@@ -6,16 +6,16 @@
   
   <title>Hexo插入图片方法 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="A)简介：在使用Hexo博客时，遇到了将本地图片插入文章的问题。安装了hexo-asset-image插件（v1.0.0）并启用资源文件夹功能后，图片并未正确显示。问题在于图片路径未被转换。通过卸载hexo-asset-image，改用hexo-asset-img插件，并调整图片引用格式为![alt](文章名&#x2F;图片名.png)，成功解决了图片显示问题。此问题源于hexo-asset-image在">
+  <meta name="description" content="hlw {background-color:pink;         padding:5px;         border-radius:8px;       }    A)简介：在使用Hexo博客时，遇到了将本地图片插入文章的问题。安装了hexo-asset-image插件（v1.0.0）并启用资源文件夹功能后，图片并未正确显示。问题在于图片路径未被转换。通过卸载hexo-asset-">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo插入图片方法">
 <meta property="og:url" content="http://example.com/2024/09/06/Hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="A)简介：在使用Hexo博客时，遇到了将本地图片插入文章的问题。安装了hexo-asset-image插件（v1.0.0）并启用资源文件夹功能后，图片并未正确显示。问题在于图片路径未被转换。通过卸载hexo-asset-image，改用hexo-asset-img插件，并调整图片引用格式为![alt](文章名&#x2F;图片名.png)，成功解决了图片显示问题。此问题源于hexo-asset-image在">
+<meta property="og:description" content="hlw {background-color:pink;         padding:5px;         border-radius:8px;       }    A)简介：在使用Hexo博客时，遇到了将本地图片插入文章的问题。安装了hexo-asset-image插件（v1.0.0）并启用资源文件夹功能后，图片并未正确显示。问题在于图片路径未被转换。通过卸载hexo-asset-">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2024/09/06/hello-world/ic.jpg">
 <meta property="article:published_time" content="2024-09-06T11:33:22.000Z">
-<meta property="article:modified_time" content="2024-09-06T11:40:40.748Z">
+<meta property="article:modified_time" content="2024-09-06T12:15:09.698Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2024/09/06/hello-world/ic.jpg">
@@ -95,12 +95,41 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p><img src="/2024/09/06/hello-world/ic.jpg" alt="pic"></p>
-<p>A)简介：<br>在使用Hexo博客时，遇到了将本地图片插入文章的问题。安装了<code>hexo-asset-image</code>插件（v1.0.0）并启用资源文件夹功能后，图片并未正确显示。问题在于图片路径未被转换。通过卸载<code>hexo-asset-image</code>，改用<code>hexo-asset-img</code>插件，并调整图片引用格式为<code>![alt](文章名/图片名.png)</code>，成功解决了图片显示问题。此问题源于<code>hexo-asset-image</code>在Hexo 5及更高版本中已失效。 ^</p>
-<p>我们从 README 里面还了解到：大概是从 Hexo 5 开始， hexo-asset-image 已经失效, 并且此仓库已 archived。</p>
-<p>解決hexo圖片無法載入問題（圖片地址重定向錯誤的問題）<br>改用以下外掛</p>
+        <style>
+  hlw {background-color:pink;
+        padding:5px;
+        border-radius:8px;
+      }
+</style>
+
+<p><img src="/2024/09/06/hello-world/ic.jpg" alt="pic"></p>
+<h1 id="A-简介："><a href="#A-简介：" class="headerlink" title="A)简介："></a>A)简介：</h1><p>在使用Hexo博客时，遇到了将本地图片插入文章的问题。安装了<code>hexo-asset-image</code>插件（v1.0.0）并启用资源文件夹功能后，图片并未正确显示。问题在于图片路径未被转换。通过卸载<code>hexo-asset-image</code>，改用<code>hexo-asset-img</code>插件，并调整图片引用格式为<code>![alt](文章名/图片名.png)</code>，成功解决了图片显示问题。此问题源于<code>hexo-asset-image</code>在Hexo 5及更高版本中已失效。 ^</p>
+<h2 id="A1-hexo-asset-img"><a href="#A1-hexo-asset-img" class="headerlink" title="A1) hexo-asset-img"></a>A1) hexo-asset-img</h2><p>我们从 README 里面还了解到：大概是从 Hexo 5 开始，<hlw>hexo-asset-image</hlw> 已经失效, 并且此仓库已 archived。</p>
+<p>改用以下外掛</p>
 <p><del>hexo-asset-image</del> </p>
-<p>hexo-asset-img  OK<br>k</p>
+<p><hlw>hexo-asset-img  OK</hlw></p>
+<h2 id="A2-hexo-renderer-marked"><a href="#A2-hexo-renderer-marked" class="headerlink" title="A2) hexo-renderer-marked"></a>A2) hexo-renderer-marked</h2><h3 id="A21-打开-config-yml文件-修改或确认以下设置"><a href="#A21-打开-config-yml文件-修改或确认以下设置" class="headerlink" title="A21) 打开.&#x2F;_config.yml文件, 修改或确认以下设置:"></a>A21) 打开<hlw>.&#x2F;_config.yml</hlw>文件, 修改或确认以下设置:</h3><pre>
+post_asset_folder: true
+relative_link: false
+marked:
+  prependRoot: true
+  postAsset: true
+</pre>
+
+<h3 id="A22-打开-node-modules-hexo-renderer-marked-lib-renderer-js"><a href="#A22-打开-node-modules-hexo-renderer-marked-lib-renderer-js" class="headerlink" title="A22) 打开.&#x2F;node_modules&#x2F;hexo-renderer-marked&#x2F;lib&#x2F;renderer.js,"></a>A22) 打开<hlw>.&#x2F;node_modules&#x2F;hexo-renderer-marked&#x2F;lib&#x2F;renderer.js</hlw>,</h3><p>搜索image定位到修改图片相对路径的代码, 按如下方式修改代码:</p>
+<pre>
+const { lazyload, figcaption, prependRoot, postPath } = options;
+  
+  // ============================== 以下代码有改动 ==============================
+  const searchAssetLocation = ['./', '../'];
+  // ============================== 以上代码有改动 ==============================
+  
+  if (!/^(#|\/\/|http(s)?:)/.test(href) && !relative_link && prependRoot) 
+</pre>
+
+<h2 id="A3-markdown-插图写法："><a href="#A3-markdown-插图写法：" class="headerlink" title="A3) markdown 插图写法："></a>A3) markdown 插图写法：</h2><pre>![图片](图片.jpg)</pre>
+
+<h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><p><a href=https://www.hwpo.top/posts/d87f7e0c/index.html>Lucien的博客</a><br><a href=https://developer.aliyun.com/article/1503074>hexo 博客插入本地图片时遇到的坑</a></p>
 
       
     </div>
