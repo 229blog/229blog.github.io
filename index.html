@@ -69,6 +69,70 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Markdown常用格式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/10/05/Markdown%E5%B8%B8%E7%94%A8%E6%A0%BC%E5%BC%8F/" class="article-date">
+  <time class="dt-published" datetime="2024-10-05T06:19:50.000Z" itemprop="datePublished">2024-10-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/10/05/Markdown%E5%B8%B8%E7%94%A8%E6%A0%BC%E5%BC%8F/">Markdown常用格式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <style>
+        hlw {background-color:pink;
+             padding:5px;
+             border-radius:8px;
+             }
+</style>
+<p><img src="/2024/09/06/hello-world/markdown.jpg" alt="markdown"></p>
+<h2 id="A-Markdown-引用-style-标签"><a href="#A-Markdown-引用-style-标签" class="headerlink" title="A) Markdown 引用 style 标签"></a>A) Markdown 引用 <hlw>style 标签</hlw></h2><pre>
+style <>
+        hlw {background-color:pink;
+             padding:5px;
+             border-radius:8px;
+             }
+/style <> 
+</pre>
+
+<p>文章开头加上style标签，就可以hlw。</p>
+<h2 id="B-区块引用"><a href="#B-区块引用" class="headerlink" title="B) 区块引用"></a>B) 区块引用</h2><p>有2种方法。</p>
+<h3 id="B1-以下是用-标签效果。"><a href="#B1-以下是用-标签效果。" class="headerlink" title="B1) 以下是用&gt; 标签效果。"></a>B1) 以下是用<hlw>&gt; 标签</hlw>效果。</h3><p>只是把引用内容放到中间。没有黑底白字。</p>
+<blockquote>
+<p>区块引用<br>abcd<br>efg</p>
+</blockquote>
+<h3 id="B2-以下是用pre-标签效果。"><a href="#B2-以下是用pre-标签效果。" class="headerlink" title="B2) 以下是用pre 标签效果。"></a>B2) 以下是用<hlw>pre 标签</hlw>效果。</h3><pre>
+echo $(date)
+</pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/10/05/Markdown%E5%B8%B8%E7%94%A8%E6%A0%BC%E5%BC%8F/" data-id="cm1vro4vw00000d7fdbb23az9" data-title="Markdown常用格式" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
     <article id="post-Asterisk-chan-dongle" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/10/02/Asterisk-chan-dongle/" class="article-date">
@@ -96,12 +160,17 @@
 <ol>
 <li>IMEI IMSI 要匹配。<br>2） 中国移动是最好的。su</li>
 </ol>
+<blockquote>
 <p>cn817993     0     Free       5    5    4       FFFFFFFFFFFFFF      深圳联通真的不成。</p>
+</blockquote>
 <p><img src="/2024/09/06/hello-world/n-dongle/ttyUSB0.jpg" alt="ttyUSB0"></p>
 <ol>
 <li>插入 usb stick,</li>
 <li>检测 usb slot 位置<br>udevadm info -a &#x2F;dev&#x2F;ttyUSB0</li>
-<li>更改以下 files<br>&#x2F;etc&#x2F;udev&#x2F;rules.d&#x2F;10-dongle.rules<br>sudo vi &#x2F;etc&#x2F;asterisk&#x2F;dongle.conf </li>
+<li>更改以下 files<blockquote>
+<p>&#x2F;etc&#x2F;udev&#x2F;rules.d&#x2F;10-dongle.rules<br>sudo vi &#x2F;etc&#x2F;asterisk&#x2F;dongle.conf </p>
+</blockquote>
+</li>
 <li>sudo reboot better then sudo poweroff</li>
 </ol>
 <p>更换 usb stick 要 sudo reboot.<br>usb 一插进去就 GSM not re  ,  此usb stick 就有问题。<br>1)同一公司别连续放在一起。<br>2) 换了 usb stick 马上能检测成功<br>IMEI 换 usb stick       IMSI 换 sim card<br>从 dongle show devices 可看到真 imei imsi<br>之后 ， sudo systemctl restart asterisk.service<br>imei  usb stick 14741 好像有问题。</p>
@@ -496,6 +565,10 @@ const { lazyload, figcaption, prependRoot, postPath } = options;
       <ul>
         
           <li>
+            <a href="/2024/10/05/Markdown%E5%B8%B8%E7%94%A8%E6%A0%BC%E5%BC%8F/">Markdown常用格式</a>
+          </li>
+        
+          <li>
             <a href="/2024/10/02/Asterisk-chan-dongle/">Asterisk+chan_dongle</a>
           </li>
         
@@ -509,10 +582,6 @@ const { lazyload, figcaption, prependRoot, postPath } = options;
         
           <li>
             <a href="/2024/09/07/Hexo%E7%BB%93%E6%9E%84%E5%BA%94%E8%AF%86/">Hexo结构应识</a>
-          </li>
-        
-          <li>
-            <a href="/2024/09/06/Hexo%E6%9B%BF%E6%8D%A2%E4%B8%BB%E9%A2%98/">Hexo替换主题</a>
           </li>
         
       </ul>
