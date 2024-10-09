@@ -69,6 +69,82 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-systemd" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/10/05/systemd/" class="article-date">
+  <time class="dt-published" datetime="2024-10-05T12:52:13.000Z" itemprop="datePublished">2024-10-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/10/05/systemd/">systemd</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <style>
+    h1, h2, h3 { color:blue; } 
+        hlw {background-color:pink;
+             padding:5px;
+             border-radius:8px;
+             }
+</style>
+
+<p><img src="/2024/09/06/hello-world/emd.jpg" alt="systemd"></p>
+<h1>Systemd 用法&简介</h1>
+
+<h2>A) 介绍：</h2>
+Systemd服务 脚本一般存放在： 
+> /usr/lib/systemd 目录下, 
+目录下又有 user， 和 system 之分
+
+<pre><code>/usr/lib/systemd/system # 系统服务，开机不需要登录就能运行的程序（相当于开机自启）
+/usr/lib/systemd/user # 用户服务，需要登录后才能运行的程序
+</code></pre>
+<h3>B) journalctl</h3> 
+
+<h3>C) timedatectl</h3>
+
+
+<pre>
+root@dev:~# timedatectl list-timezones |  egrep  -o "Asia/S.*"
+--------------------------------------------------------------------------------------
+Asia/Sakhalin
+Asia/Samarkand
+Asia/Seoul
+Asia/Shanghai
+Asia/Singapore
+Asia/Srednekolymsk
+</pre>
+
+<p>（5）在 Linux 中设置本地时区，使用 <hlw>set-timezone</hlw> 选项，如下所示：</p>
+<p>root@dev:~# timedatectl set-timezone “Asia&#x2F;Seoul”</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/10/05/systemd/" data-id="cm1w5sr790000gf7f9uqd64up" data-title="systemd" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
     <article id="post-Markdown常用格式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/10/05/Markdown%E5%B8%B8%E7%94%A8%E6%A0%BC%E5%BC%8F/" class="article-date">
@@ -92,18 +168,20 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <style>
-        hlw {background-color:pink;
-             padding:5px;
-             border-radius:8px;
-             }
+    h1, h2, h3 { color:blue; }
+        hlw { background-color:pink;
+              padding:5px;
+              border-radius:8px;
+            }
 </style>
 <p><img src="/2024/09/06/hello-world/markdown.jpg" alt="markdown"></p>
 <h2 id="A-Markdown-引用-style-标签"><a href="#A-Markdown-引用-style-标签" class="headerlink" title="A) Markdown 引用 style 标签"></a>A) Markdown 引用 <hlw>style 标签</hlw></h2><pre>
 style <>
-        hlw {background-color:pink;
-             padding:5px;
-             border-radius:8px;
-             }
+    h1, h2, h3 { color:blue; }
+        hlw { background-color:pink;
+              padding:5px;
+              border-radius:8px;
+            }
 /style <> 
 </pre>
 
@@ -565,6 +643,10 @@ const { lazyload, figcaption, prependRoot, postPath } = options;
       <ul>
         
           <li>
+            <a href="/2024/10/05/systemd/">systemd</a>
+          </li>
+        
+          <li>
             <a href="/2024/10/05/Markdown%E5%B8%B8%E7%94%A8%E6%A0%BC%E5%BC%8F/">Markdown常用格式</a>
           </li>
         
@@ -578,10 +660,6 @@ const { lazyload, figcaption, prependRoot, postPath } = options;
         
           <li>
             <a href="/2024/09/21/ZBook/">ZBook</a>
-          </li>
-        
-          <li>
-            <a href="/2024/09/07/Hexo%E7%BB%93%E6%9E%84%E5%BA%94%E8%AF%86/">Hexo结构应识</a>
           </li>
         
       </ul>

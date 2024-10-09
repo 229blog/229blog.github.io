@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   
   
-  <title>Markdown常用格式 | Hexo</title>
+  <title>systemd | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="h1, h2, h3 { color:blue; }         hlw { background-color:pink;               padding:5px;               border-radius:8px;             }   A) Markdown 引用 style 标签 style      h1, h2, h3 { color:b">
+  <meta name="description" content="h1, h2, h3 { color:blue; }          hlw {background-color:pink;              padding:5px;              border-radius:8px;              }    Systemd 用法&amp;简介  A) 介绍： Systemd服务 脚本一般存放在：  &gt; &#x2F;usr&#x2F;lib&#x2F;sy">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown常用格式">
-<meta property="og:url" content="http://example.com/2024/10/05/Markdown%E5%B8%B8%E7%94%A8%E6%A0%BC%E5%BC%8F/index.html">
+<meta property="og:title" content="systemd">
+<meta property="og:url" content="http://example.com/2024/10/05/systemd/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="h1, h2, h3 { color:blue; }         hlw { background-color:pink;               padding:5px;               border-radius:8px;             }   A) Markdown 引用 style 标签 style      h1, h2, h3 { color:b">
+<meta property="og:description" content="h1, h2, h3 { color:blue; }          hlw {background-color:pink;              padding:5px;              border-radius:8px;              }    Systemd 用法&amp;简介  A) 介绍： Systemd服务 脚本一般存放在：  &gt; &#x2F;usr&#x2F;lib&#x2F;sy">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2024/09/06/hello-world/markdown.jpg">
-<meta property="article:published_time" content="2024-10-05T06:19:50.000Z">
-<meta property="article:modified_time" content="2024-10-05T13:03:58.585Z">
+<meta property="og:image" content="http://example.com/2024/09/06/hello-world/emd.jpg">
+<meta property="article:published_time" content="2024-10-05T12:52:13.000Z">
+<meta property="article:modified_time" content="2024-10-06T09:11:12.209Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2024/09/06/hello-world/markdown.jpg">
+<meta name="twitter:image" content="http://example.com/2024/09/06/hello-world/emd.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -73,10 +73,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-Markdown常用格式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-systemd" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2024/10/05/Markdown%E5%B8%B8%E7%94%A8%E6%A0%BC%E5%BC%8F/" class="article-date">
-  <time class="dt-published" datetime="2024-10-05T06:19:50.000Z" itemprop="datePublished">2024-10-05</time>
+    <a href="/2024/10/05/systemd/" class="article-date">
+  <time class="dt-published" datetime="2024-10-05T12:52:13.000Z" itemprop="datePublished">2024-10-05</time>
 </a>
     
   </div>
@@ -87,7 +87,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Markdown常用格式
+      systemd
     </h1>
   
 
@@ -96,37 +96,47 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <style>
-    h1, h2, h3 { color:blue; }
-        hlw { background-color:pink;
-              padding:5px;
-              border-radius:8px;
-            }
+    h1, h2, h3 { color:blue; } 
+        hlw {background-color:pink;
+             padding:5px;
+             border-radius:8px;
+             }
 </style>
-<p><img src="/2024/09/06/hello-world/markdown.jpg" alt="markdown"></p>
-<h2 id="A-Markdown-引用-style-标签"><a href="#A-Markdown-引用-style-标签" class="headerlink" title="A) Markdown 引用 style 标签"></a>A) Markdown 引用 <hlw>style 标签</hlw></h2><pre>
-style <>
-    h1, h2, h3 { color:blue; }
-        hlw { background-color:pink;
-              padding:5px;
-              border-radius:8px;
-            }
-/style <> 
+
+<p><img src="/2024/09/06/hello-world/emd.jpg" alt="systemd"></p>
+<h1>Systemd 用法&简介</h1>
+
+<h2>A) 介绍：</h2>
+Systemd服务 脚本一般存放在： 
+> /usr/lib/systemd 目录下, 
+目录下又有 user， 和 system 之分
+
+<pre><code>/usr/lib/systemd/system # 系统服务，开机不需要登录就能运行的程序（相当于开机自启）
+/usr/lib/systemd/user # 用户服务，需要登录后才能运行的程序
+</code></pre>
+<h3>B) journalctl</h3> 
+
+<h3>C) timedatectl</h3>
+
+
+<pre>
+root@dev:~# timedatectl list-timezones |  egrep  -o "Asia/S.*"
+--------------------------------------------------------------------------------------
+Asia/Sakhalin
+Asia/Samarkand
+Asia/Seoul
+Asia/Shanghai
+Asia/Singapore
+Asia/Srednekolymsk
 </pre>
 
-<p>文章开头加上style标签，就可以hlw。</p>
-<h2 id="B-区块引用"><a href="#B-区块引用" class="headerlink" title="B) 区块引用"></a>B) 区块引用</h2><p>有2种方法。</p>
-<h3 id="B1-以下是用-标签效果。"><a href="#B1-以下是用-标签效果。" class="headerlink" title="B1) 以下是用&gt; 标签效果。"></a>B1) 以下是用<hlw>&gt; 标签</hlw>效果。</h3><p>只是把引用内容放到中间。没有黑底白字。</p>
-<blockquote>
-<p>区块引用<br>abcd<br>efg</p>
-</blockquote>
-<h3 id="B2-以下是用pre-标签效果。"><a href="#B2-以下是用pre-标签效果。" class="headerlink" title="B2) 以下是用pre 标签效果。"></a>B2) 以下是用<hlw>pre 标签</hlw>效果。</h3><pre>
-echo $(date)
-</pre>
+<p>（5）在 Linux 中设置本地时区，使用 <hlw>set-timezone</hlw> 选项，如下所示：</p>
+<p>root@dev:~# timedatectl set-timezone “Asia&#x2F;Seoul”</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/05/Markdown%E5%B8%B8%E7%94%A8%E6%A0%BC%E5%BC%8F/" data-id="cm1vro4vw00000d7fdbb23az9" data-title="Markdown常用格式" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/10/05/systemd/" data-id="cm1w5sr790000gf7f9uqd64up" data-title="systemd" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -136,19 +146,10 @@ echo $(date)
     
 <nav id="article-nav">
   
-    <a href="/2024/10/05/systemd/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          systemd
-        
-      </div>
-    </a>
   
-  
-    <a href="/2024/10/02/Asterisk-chan-dongle/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2024/10/05/Markdown%E5%B8%B8%E7%94%A8%E6%A0%BC%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Asterisk+chan_dongle</div>
+      <div class="article-nav-title">Markdown常用格式</div>
     </a>
   
 </nav>
